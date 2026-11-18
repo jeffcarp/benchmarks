@@ -55,7 +55,7 @@ select = [
 
 [tool.ruff.lint.per-file-ignores]
 "**/__init__.py" = ["E501", "F401"]
-"tests/**" = ["S101"]
+"**/*_test.py" = ["S101"]
 
 [tool.ruff.lint.isort]
 force-single-line = true
@@ -63,4 +63,5 @@ known-first-party = ["keras", "keras_benchmarks"]
 
 [tool.pytest.ini_options]
 addopts = "-vv"
+python_files = ["*_test.py"]
 norecursedirs = ["build", "results"]
